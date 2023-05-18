@@ -23,12 +23,18 @@ include 'conn.php';
     Time Zone Watches
   </title>
 
+  <style>
+    html
+    {
+      scroll-behavior: smooth;
+    }
+  </style>
+
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
@@ -40,30 +46,25 @@ include 'conn.php';
 
 </head>
 
-<body class="sub_page">
-
-  <div class="hero_area">
+<body>
 
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <a class="navbar-brand" href="index.php">
-          <img src="images/timezonewatches.png" alt="" width="100px">
+            <img src="images/timezonewatches.png" alt="" width="100px">
           </a>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
+        
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.php">Home </a>
-              </li>
               <li class="nav-item active">
-                <a class="nav-link" href="watches.php"> Watches <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="watches.php"> Watches </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.php"> About </a>
@@ -71,12 +72,18 @@ include 'conn.php';
               <li class="nav-item">
                 <a class="nav-link" href="contact.php">Contact Us</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="signin.php"> signin </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="register.php">Sign Up</a>
+              </li>
             </ul>
             <div class="user_option-box">
               <a href="Dashboard/login.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
-              <a href="">
+              <a href="cart.php">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
               </a>
               <a href="">
@@ -88,11 +95,11 @@ include 'conn.php';
       </div>
     </header>
     <!-- end header section -->
-  </div>
 
   <!-- shop section -->
 
   <section class="shop_section layout_padding">
+
     <div class="container">
       <div class="heading_container heading_center">
         <h2>
@@ -434,22 +441,12 @@ include 'conn.php';
   <!-- footer section -->
 
   <!-- jQery -->
+  <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
 
 </body>
 

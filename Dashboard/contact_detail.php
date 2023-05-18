@@ -5,14 +5,14 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>TZW Admin</title>
-  <!-- base:css -->
+  <title>
+    TZW Admin
+  </title>
   <link rel="stylesheet" href="vendors/typicons.font/font/typicons.css">
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
-  <!-- endinject -->
-  <!-- inject:css -->
+
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
-  <!-- endinject -->
+
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
@@ -21,7 +21,7 @@
     <!-- partial:partials/_navbar.php -->
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-        <a class="navbar-brand brand-logo" href="index.php"><img src="images/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand brand-logo" href="index.php"><img src="images/timezonewatches.png" alt="logo" /></a>
         <a class="navbar-brand brand-logo-mini" href="index.php"><img src="images/logo-mini.svg" alt="logo" /></a>
         <button class="navbar-toggler navbar-toggler align-self-center d-none d-lg-flex" type="button"
           data-toggle="minimize">
@@ -40,7 +40,7 @@
             </a>
 
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-              <a class="dropdown-item">
+              <a href="login.php" class="dropdown-item">
                 <i class="typcn typcn-power text-primary"></i>
                 Logout
               </a>
@@ -56,17 +56,18 @@
     </nav>
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_sidebar.php -->
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
             <div class="d-flex sidebar-profile">
               <div class="sidebar-profile-image">
-                <img src="images/faces/face29.png" alt="image">
+                <img src="images/timezonewatches.png" alt="image">
                 <span class="sidebar-status-indicator"></span>
               </div>
               <div class="sidebar-profile-name">
                 <p class="sidebar-name">
-                 Sherry
+                  TZW
                 </p>
                 <p class="sidebar-designation">
                   Welcome
@@ -93,36 +94,25 @@
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="contact_detail.php">Contact Detail</a></li>
-                <!-- <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.php">Dropdowns</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.php">Typography</a></li> -->
+
               </ul>
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
+              aria-controls="form-elements">
               <i class="typcn typcn-film menu-icon"></i>
-              <span class="menu-title">Form elements</span>
+              <span class="menu-title">Product</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
               <ul class="nav flex-column sub-menu">
-              <li class="nav-item"><a class="nav-link" href="add_product.php">Add Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="add_product.php">Add Product</a></li>
                 <li class="nav-item"><a class="nav-link" href="remove_product.php">Remove Product</a></li>
               </ul>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
-              <i class="typcn typcn-chart-pie-outline menu-icon"></i>
-              <span class="menu-title">Charts</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="charts">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="chartjs.php">ChartJs</a></li>
-              </ul>
-            </div>
-          </li>
+        
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i class="typcn typcn-th-small-outline menu-icon"></i>
@@ -135,15 +125,17 @@
               </ul>
             </div>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
-              <i class="typcn typcn-compass menu-icon"></i>
-              <span class="menu-title">Icons</span>
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="typcn typcn-user-add-outline menu-icon"></i>
+              <span class="menu-title">User Pages</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="icons">
+            <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="mdi.php">Mdi icons</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.php"> Login </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.php"> Register </a></li>
               </ul>
             </div>
           </li>

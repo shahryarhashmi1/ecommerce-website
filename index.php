@@ -48,7 +48,9 @@ if(isset($_POST['done']))
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
 
@@ -61,7 +63,6 @@ if(isset($_POST['done']))
 
 <body>
 
-  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
@@ -97,7 +98,7 @@ if(isset($_POST['done']))
               <a href="Dashboard/login.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
-              <a href="addtocart.php">
+              <a href="cart.php">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
               </a>
               <a href="">
@@ -203,7 +204,6 @@ if(isset($_POST['done']))
 
     </section>
     <!-- end slider section -->
-  </div>
 
   <!-- shop section -->
 

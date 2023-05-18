@@ -33,7 +33,9 @@ include 'conn.php';
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-  
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
   <!-- font awesome style -->
   <link href="css/font-awesome.min.css" rel="stylesheet" />
 
@@ -46,7 +48,6 @@ include 'conn.php';
 
 <body>
 
-  <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <div class="container-fluid">
@@ -82,7 +83,7 @@ include 'conn.php';
               <a href="Dashboard/login.php">
                 <i class="fa fa-user" aria-hidden="true"></i>
               </a>
-              <a href="addtocart.php">
+              <a href="cart.php">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
               </a>
               <a href="">

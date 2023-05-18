@@ -37,6 +37,9 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- cart style -->
+  <link href="css/cart.css" rel="stylesheet" />
+
 
 </head>
 
@@ -88,45 +91,64 @@
         </nav>
       </div>
     </header>
+
     <!-- end header section -->
 
-  <!-- about section -->
+      <!-- Start Cart Section  -->
 
-  <section class="about_section layout_padding">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6 col-lg-5 ">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
+
+  <section class="cart_section">
+
+    <div class="cart-items">
+      <div class="cart-item">
+        <div class="item-image">
+          <img src="images/w1.png" alt="item 1">
         </div>
-        <div class="col-md-6 col-lg-7">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About Us
-              </h2>
-            </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <a href="">
-              Read More
-            </a>
+        <div class="item-details">
+          <h3 class="item-title">Item 1</h3>
+          <p class="item-price">$15.00</p>
+          <div class="item-quantity">
+            <input type="number" value="1" min="1" max="3">
+            <button class="remove-item">Remove</button>
           </div>
+          <p class="item-total">$15.00</p>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <div class="item-image">
+          <img src="images/w2.png" alt="Item 2">
+        </div>
+        <div class="item-details">
+          <h3 class="item-title">Item 2</h3>
+          <p class="item-price">$15.00</p>
+          <div class="item-quantity">
+            <input type="number" value="1" min="1" max="3">
+            <button class="remove-item">Remove</button>
+          </div>
+          <p class="item-total">$15.00</p>
         </div>
       </div>
     </div>
+
+    <div class="cart-summary">
+      <div class="subtotal">
+        <span class="subtotal-text">Subtotal:</span>
+        <span class="subtotal-amount">$25.00</span>
+      </div>
+      <div class="checkout">
+        <button class="checkout-btn">Proceed to Checkout</button>
+      </div>
+    </div>
+    
   </section>
+    
 
-  <hr>
 
-  <!-- end about section -->
-
-  <!-- footer section -->
+<!-- End Cart Section -->
+   
+   
+    <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
       <div class="row">
@@ -136,7 +158,8 @@
               About
             </h4>
             <p>
-              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with
+              Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
+              words, combined with
             </p>
 
             <!-- <div class="footer_social">
@@ -256,23 +279,17 @@
     </div>
   </footer>
   <!-- footer section -->
-
+  
+  <script src="js/cart.js"></script>
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
   <!-- bootstrap js -->
   <script src="js/bootstrap.js"></script>
-  <!-- owl slider -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
   <!-- custom js -->
   <script src="js/custom.js"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
-  <!-- End Google Map -->
+
 
 </body>
+
 
 </html>
