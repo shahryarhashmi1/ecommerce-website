@@ -7,10 +7,9 @@ if(isset($_POST['done']))
 
 		$fullname = $_POST['fullname'];
 		$email    = $_POST['email'];
-		$number   = $_POST['number'];
 		$message  = $_POST['message'];
 
-		$q = " INSERT INTO `contact_form`(`fullname`, `email`, `number`, `message`) VALUES ('$fullname', '$email', '$number', '$message')";
+		$q = " INSERT INTO `contact_form`(`fullname`, `email`, `message`) VALUES ('$fullname', '$email', '$message')";
 
 		$query = mysqli_query($conn, $q);
 		header("location:contact.php");
@@ -132,10 +131,6 @@ if(isset($_POST['done']))
               
               <div>
                 <input type="email" placeholder="Email"  id="email" name="email" autocomplete="off" required>
-              </div>
-              
-              <div>
-                <input type="number" placeholder="Phone number"  id="number" name="number" autocomplete="off" required>
               </div>
               
               <div>
