@@ -7,7 +7,7 @@
      // Create connection
     $conn = new mysqli($host, $user, $password, $database);
      
-     mysqli_select_db($conn, 'tzw_website');
+     // mysqli_select_db($conn, 'tzw_website');
 
      // Check connection
      // if ($conn->connect_error)

@@ -2,26 +2,12 @@
 
 include "conn.php";
 
-$q = "SELECT my_image, product_name, price, product_detail, product_code FROM add_product";
+$q = "SELECT my_image, product_name, product_detail, FROM index_product";
+
+
 
 ?>
 
-<?php
-
-include 'conn.php';
-
-if (isset($_POST['brand'])) {
-
-  $brand_name = $_POST['brand_name'];
-
-  $q = " INSERT INTO `add_brand`(`brand_name`) VALUES ('$brand_name')";
-
-  $query = mysqli_query($conn, $q);
-  header("location:add_product.php");
-
-}
-
-?>
 
 <!-- header or navbar file attach -->
 <?php
@@ -41,10 +27,10 @@ include 'dash_header_or_nav.php';
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">
-                    Add Product
+                    Add Product to Index Page
                   </h4>
 
-                  <form class="forms-sample" action="upload.php" enctype="multipart/form-data" method="post">
+                  <form class="forms-sample" action="index_upload.php" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                       <label>
                         Image upload
@@ -72,14 +58,6 @@ include 'dash_header_or_nav.php';
                         placeholder="Enter Watch Name" autocomplete="off" Required>
                     </div>
 
-                    <div class="form-group">
-                      <label for="exampleInputCity1">
-                        Price
-                      </label>
-
-                      <input type="number" name="price" class="form-control" id="exampleInputCity1"
-                        placeholder="Enter Price" autocomplete="off" Required>
-                    </div>
 
                     <div class="form-group">
                       <label for="exampleInputdetail1">
@@ -89,13 +67,6 @@ include 'dash_header_or_nav.php';
                         placeholder="Enter Watch Details" autocomplete="off" Required>
                     </div>
 
-                    <div class="form-group">
-                      <label for="exampleInputCode1">
-                        Watch Code
-                      </label>
-                      <input type="text" name="product_code" class="form-control" id="exampleInputCode1"
-                        placeholder="Enter Watch Name" autocomplete="off" Required>
-                    </div>
 
                     <input type="submit" name="done" class="btn btn-primary mr-2" Value="Add">
 
@@ -114,37 +85,10 @@ include 'dash_header_or_nav.php';
         <!--brand partial -->
         <div class="content-wrapper">
           <div class="row">
-            
-
-            <div class="col-12 grid-margin stretch-card">
-              <div class="card">
-                <div class="card-body">
-                  <h4 class="card-title">
-                    Add Brand
-                  </h4>
-
-                  <form class="forms-sample" method="post"> 
-
-                    <div class="form-group">
-                      <label for="exampleInputBrand1">
-                        Brand Name
-                      </label>
-                      <input type="text" name="brand_name" class="form-control" id="exampleInputBrand1"
-                        placeholder="Enter Brand Name" autocomplete="off" Required>
-                    </div>
-
-                    <input type="submit" name="brand" class="btn btn-primary mr-2" Value="Add">
-
-                    <!-- <button class="btn btn-light">Cancel</button> -->
-                  </form>
-                </div>
-              </div>
-            </div>
-
           
-        <!-- content brand wrapper ends -->
 
-        <footer class="footer">
+
+  <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
             <span class="text-center text-sm-left d-block d-sm-inline-block">Copyright © <a href=""
                 target="_blank">TZW.com</a> 2023</span>

@@ -18,7 +18,7 @@ include 'dash_header_or_nav.php';
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">
-                    Contact Details
+                    User Info
                   </h4>
                   
                   <div class="table-responsive">
@@ -30,7 +30,7 @@ include 'dash_header_or_nav.php';
                           </th>
                           
                           <th>
-                            First name
+                            Name
                           </th>
                           
                           <th>
@@ -38,23 +38,21 @@ include 'dash_header_or_nav.php';
                           </th>
                           
                           <th>
-                            Number
+                          Country
                           </th>
                           
                           <th>
-                            Message
+                            Password
                           </th>
 
-                          <th>
-                            Status
-                          </th>
+                          
                         </tr>
                       </thead>
                       <tbody>
                       <?php
                           include 'conn.php'; 
 
-                          $q = "select * from `contact_form`";
+                          $q = "select * from `registration_form`";
 
                           $query = mysqli_query($conn,$q);
 
@@ -76,19 +74,15 @@ include 'dash_header_or_nav.php';
                           </td>
 
                           <td>
-                            <?php echo $res['number']; ?>
+                            <?php echo $res['counrty']; ?>
                           </td>
 
                           <td>
-                            <?php echo $res['message']; ?>
+                            <?php echo $res['password']; ?>
                           </td>
 
                           <td>
-                            <button class="btn btn-danger">
-                              <a href="delete.php?id=<?php echo $res['id']; ?>" class="text-white">
-                                Delete
-                              </a>
-                            </button>
+                           
                           </td>
                         </tr>
 

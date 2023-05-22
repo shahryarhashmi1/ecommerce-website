@@ -1,0 +1,23 @@
+.category_section nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.category_section nav ul li {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.category_section nav ul li:hover {
+  background-color: #ffffff;
+}
+
+.category_section nav .active {
+  background-color: white;
+}
+

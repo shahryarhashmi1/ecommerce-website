@@ -301,8 +301,8 @@
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.php"> Login </a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.php"> Register </a></li>
+                
+                <li class="nav-item"> <a class="nav-link" href="User_Data.php"> Registered Users </a></li>
               </ul>
             </div>
           </li>
