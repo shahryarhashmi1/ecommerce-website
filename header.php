@@ -35,8 +35,6 @@
 
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
-    <!-- Custom styles for this template -->
-    <link href="css/style.scss" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
@@ -52,7 +50,9 @@
             <img src="images/timezonewatches.png" alt="" width="100px">
           </a>
 
-        
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""> </span>
+          </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
