@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
 
   <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="stylesheet" href="css/Buttons/buttons.css">
 
   <link rel="shortcut icon" href="images/favicon.png" />
 </head>
@@ -104,7 +105,7 @@
             <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false"
               aria-controls="form-elements">
               <i class="typcn typcn-film menu-icon"></i>
-              <span class="menu-title">Product</span>
+              <span class="menu-title"> Manage Products</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="form-elements">
@@ -112,37 +113,33 @@
                 <li class="nav-item"><a class="nav-link" href="index_product.php">Index Product Add</a></li>
                 <li class="nav-item"><a class="nav-link" href="add_product.php">Add Product</a></li>
                 <li class="nav-item"><a class="nav-link" href="remove_product.php">Remove Product</a></li>
+                <li class="nav-item"><a class="nav-link" href="update_product.php">update Product</a></li>
               </ul>
             </div>
           </li>
 
-          <!--Tables-->
-        
           <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
-              <i class="typcn typcn-th-small-outline menu-icon"></i>
-              <span class="menu-title">Tables</span>
-              <i class="menu-arrow"></i>
-            </a>
-            <div class="collapse" id="tables">
-              <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="basic-table.php">Basic table</a></li>
-              </ul>
-            </div>
-          </li>
+  <a class="nav-link" href="manage_brands.php">
+    <i class="typcn typcn-th-small-outline menu-icon"></i>
+    <span class="menu-title">Manage Brands</span>
+  </a>
+</li>
+
+
+
 
           <!--Pages--->
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
               <i class="typcn typcn-user-add-outline menu-icon"></i>
-              <span class="menu-title">User Pages</span>
+              <span class="menu-title">User Management</span>
               <i class="menu-arrow"></i>
             </a>
             <div class="collapse" id="auth">
               <ul class="nav flex-column sub-menu">
                
-                <li class="nav-item"> <a class="nav-link" href="User_Data.php"> Registered Users </a></li>
+                <li class="nav-item"> <a class="nav-link" href="manage_users.php"> Manage Users </a></li>
               </ul>
             </div>
           </li>

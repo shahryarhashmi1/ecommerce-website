@@ -2,6 +2,12 @@
 
 include 'conn.php';
 
+//shop Section
+$query = "SELECT * FROM add_product";
+$result = mysqli_query($conn, $query);
+$products = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+//contact us section
 if(isset($_POST['done']))
 	{
 
@@ -18,13 +24,12 @@ if(isset($_POST['done']))
 
 ?>
 
-<!-- header file attach -->
 <?php
 
 include 'header.php';
 
 ?>
-<!-- header end -->
+
 
     <!-- slider section -->
     <section class="slider_section ">
@@ -163,201 +168,47 @@ include 'header.php';
     </section>
     <!-- end slider section -->
 
-  <!-- shop section -->
-
-  <section class="shop_section layout_padding">
+<!-- shop section -->
+<section class="shop_section layout_padding">
     <div class="container">
       <div class="heading_container heading_center">
-        <h2>
-          Latest Watches
-        </h2>
+        <h2>Latest Watches</h2>
       </div>
       <div class="row">
-        <div class="col-md-6 ">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w1.png" alt="">
+        <?php if (!empty($products)): ?>
+          <?php foreach ($products as $product): ?>
+            <div class="col-sm-6 col-xl-3">
+              <div class="box">
+                <a href="">
+                  <div class="img-box">
+                    <img src="Dashboard/upload/<?php echo $product['my_image']; ?>" alt="Product Image">
+                  </div>
+                  <div class="detail-box">
+                    <h6><?php echo $product['product_name']; ?></h6>
+                    <h6>Price: <span><?php echo '$' . number_format($product['price'], 2); ?></span></h6>
+                  </div>
+                  <a href="product_detail.php?id=<?php echo $product['id']; ?>" class="new">
+  <span>Buy Now</span>
+</a>
+<a href="" class="cart-btn"><i class="fas fa-shopping-cart"></i> </a>
+
+
+
               </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $300
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  Featured
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w2.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $125
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w3.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $110
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w4.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $145
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w5.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $195
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6  col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w6.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $170
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-sm-6 col-xl-3">
-          <div class="box">
-            <a href="">
-              <div class="img-box">
-                <img src="images/w1.png" alt="">
-              </div>
-              <div class="detail-box">
-                <h6>
-                  Smartwatch
-                </h6>
-                <h6>
-                  Price:
-                  <span>
-                    $230
-                  </span>
-                </h6>
-              </div>
-              <div class="new">
-                <span>
-                  New
-                </span>
-              </div>
-            </a>
-          </div>
-        </div>
+            </div>
+          <?php endforeach; ?>
+        <?php else: ?>
+          <p>No products found.</p>
+        <?php endif; ?>
       </div>
       <div class="btn-box">
-        <a href="watches.php">
-          View All
-        </a>
+        <a href="watches.php">View All</a>
       </div>
     </div>
+    <br><br>
   </section>
-
   <!-- end shop section -->
+
 
   <!-- about section -->
 

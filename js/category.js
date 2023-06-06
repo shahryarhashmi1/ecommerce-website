@@ -20,6 +20,8 @@ function filterProducts(event) {
       product.style.display = "none";
     }
   }
+  
+  changeColor(event.target);
 }
 
 var prevListItem = null;
@@ -32,3 +34,12 @@ function changeColor(listItem) {
   listItem.classList.add("active");
   prevListItem = listItem;
 }
+
+const categoryLinks = document.querySelectorAll(".category_link");
+
+categoryLinks.forEach(link => {
+  link.addEventListener("click", function() {
+    const category = this.getAttribute("data-category");
+    window.location.href = "watch_section.php?brand=" + category;
+  });
+});

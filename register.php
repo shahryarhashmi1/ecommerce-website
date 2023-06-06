@@ -38,6 +38,8 @@ if(isset($_POST['done']))
   <link rel="stylesheet" href="Dashboard/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
 </head>
 
@@ -335,6 +337,10 @@ if(isset($_POST['done']))
                 <div class="text-center mt-4 font-weight-light">
                   Already have an account? <a href="signin.php" class="text-primary">Login</a>
                 </div>
+
+                <div class="mt-3">
+                        <a href="index.php"><i class="fa fa-home"></i> Home</a>
+                  </div>
 
               </form>
             </div>

@@ -1,13 +1,9 @@
-<!-- header or navbar file attach -->
+
 <?php
 
 include 'dash_header_or_nav.php';
 
 ?>
-<!-- header or navbar file end -->
-
-
-
 
       <!-- partial -->
       <div class="main-panel">
@@ -102,13 +98,8 @@ include 'dash_header_or_nav.php';
                   </div>
                 </div>
               </div>
-            </div>
-
-          
-<!-- footer file attach -->        
+            </div>         
+>        
 <?php
-
 include 'dash_footer.php';
-
 ?>
-<!-- footer end -->

@@ -4,14 +4,14 @@
 
     if(isset($_POST['done']))
     {
-        $query = "SELECT * FROM `loginform` WHERE `username` = '$_POST[username]' AND `password` = '$_POST[password]'";
+        $query = "SELECT * FROM `registration_form` WHERE `fullname` = '$_POST[fullname]' AND `password` = '$_POST[password]'";
 
         $result = mysqli_query($conn, $query);
 
         if(mysqli_num_rows($result)==1)
         {
             session_start();
-            $_SESSION['AdminLoginId']=$_POST['username'];
+            $_SESSION['AdminLoginId']=$_POST['fullname'];
 
             header("location:index.php");
         }
@@ -42,6 +42,9 @@
   <link rel="stylesheet" href="Dashboard/css/vertical-layout-light/style.css">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.png" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 </head>
 
 <body>
@@ -61,7 +64,7 @@
 
               <form class="pt-3" method="post">
                 <div class="form-group"  for="exampleInputEmail1" >
-                  <input type="username" autocomplete="off" required id="exampleInputEmail1" name="username" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
+                  <input type="fullname" autocomplete="off" required id="exampleInputEmail1" name="fullname" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
                 </div>
                 
                 <div class="form-group">
@@ -72,13 +75,9 @@
                   <input class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn" type="submit" name="done" href="index.php" value="LOGIN IN">
                 </div>
 
-                <center>
                   <div class="mt-3">
-                    <a class="btn btn-secondary btn-primary btn-lg font-weight-medium auth-form-btn" href="index.php">
-                      Go Back
-                    </a>
+                        <a href="index.php"><i class="fa fa-home"></i> Home</a>
                   </div>
-                </center>
               </form>
             </div>
           </div>

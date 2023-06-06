@@ -74,7 +74,7 @@
                 <center>
                   <div class="mt-3">
                     <a class="btn btn-secondary btn-primary btn-lg font-weight-medium auth-form-btn" href="../index.php">
-                      Go Back
+                      Home
                     </a>
                   </div>
                 </center>

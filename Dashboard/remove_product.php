@@ -35,7 +35,15 @@ include 'dash_header_or_nav.php';
 
 ?>
 <!-- header or navbar file end -->
+<head><style>
+    /*remove page product image size*/
+  .table td img {
+    width: 45px !important;
+    height: 69px !important;
+    border-radius: 100%;
+  }
 
+</style></head>
 
       <!-- partial -->
       <div class="main-panel">
@@ -68,7 +76,7 @@ include 'dash_header_or_nav.php';
                     <td><img src="upload/<?=$row['my_image']; ?>" alt="Product Image" width="100"></td>
                     <td><?php echo $row['product_name']; ?></td>
                     <td><?php echo $row['price']; ?></td>
-                    <td><a href="remove_product.php?id=<?php echo $row['id']; ?>" class="p_remove-button">Remove</a></td>
+                    <td><a href="remove_product.php?id=<?php echo $row['id']; ?>" class="b_remove_button">Remove</a></td>
 
                 </tr>
             <?php 
