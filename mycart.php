@@ -1,5 +1,7 @@
 <?php
 include("header.php");
+
+include('conn.php');
 ?>
 
 <!DOCTYPE html>
@@ -38,17 +40,14 @@ include("header.php");
         </thead>
 
         <tbody class="text-center">
-          <?php
-          include('conn.php');
-    
+        <?php
+        $total = 0;
 
-          $total=0;
-          if(isset($_SESSION['cart']))
-          {
-              foreach($_SESSION['cart'] as $key => $value)
-              {
-                $sr=$key + 1;
-                $total=($total+$value['Price'] *$value['Quantity']);
+        if (isset($_SESSION['cart'])) {
+            foreach ($_SESSION['cart'] as $key => $value) {
+                $sr = $key + 1;
+                $subTotal = $value['Price'] * $value['Quantity'];
+                $total += $subTotal;
                 echo"
                     <tr>
                         <td>$sr</td>

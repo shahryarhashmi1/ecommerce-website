@@ -15,7 +15,7 @@
 			$result = mysqli_query($conn, $query);
 			$row = mysqli_fetch_assoc($result);
 			?>
-        <h2>Search results for <?php echo $row['product_name']; ?></h2>
+        <h2>Search results for <?php echo $keyword; ?></h2>
       </div>
 	  
 	 

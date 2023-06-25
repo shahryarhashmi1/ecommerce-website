@@ -71,7 +71,7 @@ mysqli_close($conn);
 </div>
 <!-- End of Brand selection section -->
 
-      
+<form action="manage_cart.php" method="POST">
       <div class="row">
         <?php if (!empty($products)): ?>
           <?php foreach ($products as $product): ?>
@@ -88,15 +88,21 @@ mysqli_close($conn);
                   <a href="product_detail.php?id=<?php echo $product['id']; ?>" class="new">
                          <span>Buy Now</span>
                   </a>
-                  <a href="mycart.php" class="cart-btn"><i class="fas fa-shopping-cart"></i> </a>
-
+                  <div class="product-actions">
+                    <button type="submit" class="cart-btn" name="Add_To_Cart"><i class="fa fa-shopping-cart" ></i></button>
+                  </div>
+                  <input type="hidden" name="Item_Name" value="<?php echo $productName= $product['product_name']; ?>">
+                  <input type="hidden" name="Price" value="<?php echo $productPrice= $product['price']; ?>">
+                  <input type="hidden" name="Product_Image" value="Dashboard/upload/<?php echo $productImage= $product['my_image']; ?>">
               </div>
+              
             </div>
           <?php endforeach; ?>
         <?php else: ?>
           <p>No products found.</p>
         <?php endif; ?>
       </div>
+</form>
       <div class="btn-box">
         <a href="watches.php">View All</a>
       </div>

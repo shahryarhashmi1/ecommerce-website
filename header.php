@@ -79,7 +79,7 @@ session_start();
             </li>
             <form method="POST" class="navbar-form navbar-left" action="search.php">
           <div class="input-group">
-              <input type="text" class="form-control" id="navbar-search-input" name="keyword" placeholder="Search for Product" required>
+              <input type="text" class="form-control" id="navbar-search-input" name="keyword" placeholder="Search for Product" autofocus>
               <span class="input-group-btn" id="searchBtn" style="display:none;">
                   <button type="submit" class="btn btn-default btn-flat"><i class="fa fa-search"></i> </button>
               </span>
@@ -99,15 +99,14 @@ session_start();
           <li class="dropdown messages-menu nav-link">
             <!-- Menu toggle button -->
           
-      <?php 
-      
+            <?php 
+              $count = 0; // Define the variable before the if statement
 
-      if(isset($_SESSION['cart']))
-      {
-        $count=0;
-        $count=count($_SESSION['cart']);
-      }
-      ?>
+              if(isset($_SESSION['cart']))
+              {
+                $count = count($_SESSION['cart']); // Update the value of $count
+              }
+            ?>
         <li class="nav-link"><a href="mycart.php">
               <i class="fa fa-shopping-cart" aria-hidden="true"></i><sup><?php echo $count; ?></sup>
             </a></li>

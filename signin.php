@@ -68,7 +68,7 @@
                 </div>
                 
                 <div class="form-group">
-                  <input type="password"  name="password" placeholder="Enter Password" autocomplete="off" required class="form-control form-control-lg" id="exampleInputPassword1">
+                  <input type="password"  name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Password" autocomplete="off" required class="form-control form-control-lg" id="exampleInputPassword1">
                 </div>
 
                 <div class="mt-3">

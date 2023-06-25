@@ -64,8 +64,8 @@
             <span><?php echo $productPrice; ?>$</span>
           </div>
           <div class="product-actions">
-            <button type="submit" class="cart-btn" name="Add_To_Cart"><i class="fas fa-cart-plus" ></i>Add to cart</button>
-            <a href="#" class="buy-now-btn"><i class="fas fa-check"></i> Buy Now</a>
+            <button type="submit" name="Add_To_Cart"><i class="fa fa-shopping-cart"  ></i>Add to cart</button>
+            <a href="#" class="buy-now-btn"><i class="fa fa-check"></i> Buy Now</a>
           </div>
           
           <input type="hidden" name="Item_Name" value="<?php echo strtoupper($productName); ?>">
